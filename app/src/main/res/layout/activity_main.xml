@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context="pattrawutcalculat.androidthai.in.th.pattrawutcalculat.MainActivity">
 
+    <!--Wallpaper-->
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bgcal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
     <!--Content to Fragment-->
     <FrameLayout
         android:id="@+id/contentMainFragment"

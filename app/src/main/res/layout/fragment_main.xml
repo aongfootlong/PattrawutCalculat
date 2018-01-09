@@ -13,6 +13,44 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
 
+
     <!--Content-->
+    <LinearLayout
+        android:background="#50000000"
+        android:padding="@dimen/padding"
+        android:layout_margin="@dimen/margin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--ShowText-->
+        <TextView
+            android:id="@+id/txtShowName"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/h1"
+            android:text="Click Show Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--Show Name Button-->
+        <Button
+            android:id="@+id/btnShowName"
+            android:text="Show Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--Calculate Button-->
+        <Button
+            android:id="@+id/btncalculate"
+            android:text="Calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

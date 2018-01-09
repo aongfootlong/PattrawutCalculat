@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import pattrawutcalculat.androidthai.in.th.pattrawutcalculat.MainActivity;
 import pattrawutcalculat.androidthai.in.th.pattrawutcalculat.R;
@@ -21,11 +23,47 @@ public class MainFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+
 //    Create Toolbar
         createToolbar();
 
 
+//    ShowName Controller
+        showNameController();
+
+
+//    Calculate Controller
+        Button button = getView().findViewById(R.id.btncalculate);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentMainFragment, new CalculateFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
     }   // Main Method
+
+    private void showNameController() {
+        Button button = getView().findViewById(R.id.btnShowName);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                TextView textView = getView().findViewById(R.id.txtShowName);
+                textView.setText("AONG");
+
+            }
+        });
+
+
+    }
 
     private void createToolbar() {
         Toolbar toolbar = getView().findViewById(R.id.toolbarMain);
